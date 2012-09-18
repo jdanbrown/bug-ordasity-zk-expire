@@ -1,0 +1,27 @@
+<configuration scan="true" scanPeriod="30 seconds">
+
+  <!-- Route java.util.logging through slf4j -->
+  <contextListener class="ch.qos.logback.classic.jul.LevelChangePropagator">
+    <resetJUL>true</resetJUL>
+  </contextListener>
+
+  <jmxConfigurator/>
+
+  <conversionRule conversionWord="threadId" converterClass="logback.ThreadIdConverter"/>
+  <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+    <encoder>
+      <pattern>
+        %-5level [%date{yyyy-MM-dd'T'HH:mm:ss.SSS}] [%thread:%threadId] %logger: %message%n
+      </pattern>
+    </encoder>
+  </appender>
+
+  <logger name="bug"                             level="debug"/>
+  <logger name="com.boundary"                    level="debug"/>
+  <logger name="org.apache.zookeeper.ClientCnxn" level="info"/>
+
+  <root level="debug">
+    <appender-ref ref="STDOUT"/>
+  </root>
+
+</configuration>

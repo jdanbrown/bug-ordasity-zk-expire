@@ -1,0 +1,177 @@
+INFO  [2012-09-18T02:21:41.212] [main:1] com.boundary.ordasity.Cluster: Connecting to hosts: List(localhost/127.0.0.1:2190)
+INFO  [2012-09-18T02:21:41.236] [main:1] com.boundary.ordasity.Cluster: Registering connection watcher.
+INFO  [2012-09-18T02:21:41.255] [main:1] org.apache.zookeeper.ZooKeeper: Client environment:zookeeper.version=3.3.3-1203054, built on 11/17/2011 05:47 GMT
+INFO  [2012-09-18T02:21:41.255] [main:1] org.apache.zookeeper.ZooKeeper: Client environment:host.name=172.16.2.71
+INFO  [2012-09-18T02:21:41.255] [main:1] org.apache.zookeeper.ZooKeeper: Client environment:java.version=1.6.0_33
+INFO  [2012-09-18T02:21:41.255] [main:1] org.apache.zookeeper.ZooKeeper: Client environment:java.vendor=Apple Inc.
+INFO  [2012-09-18T02:21:41.256] [main:1] org.apache.zookeeper.ZooKeeper: Client environment:java.home=/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home
+INFO  [2012-09-18T02:21:41.256] [main:1] org.apache.zookeeper.ZooKeeper: Client environment:java.class.path=./config:./target/classes:./target/bug-ordasity-zk-expire-0.0.0-SNAPSHOT-selfcontained.jar
+INFO  [2012-09-18T02:21:41.256] [main:1] org.apache.zookeeper.ZooKeeper: Client environment:java.library.path=.:/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java
+INFO  [2012-09-18T02:21:41.256] [main:1] org.apache.zookeeper.ZooKeeper: Client environment:java.io.tmpdir=/var/folders/7v/_wvjby1x67xcy4p2_p8hhj8r0000gn/T/
+INFO  [2012-09-18T02:21:41.256] [main:1] org.apache.zookeeper.ZooKeeper: Client environment:java.compiler=<NA>
+INFO  [2012-09-18T02:21:41.256] [main:1] org.apache.zookeeper.ZooKeeper: Client environment:os.name=Mac OS X
+INFO  [2012-09-18T02:21:41.256] [main:1] org.apache.zookeeper.ZooKeeper: Client environment:os.arch=x86_64
+INFO  [2012-09-18T02:21:41.256] [main:1] org.apache.zookeeper.ZooKeeper: Client environment:os.version=10.8
+INFO  [2012-09-18T02:21:41.256] [main:1] org.apache.zookeeper.ZooKeeper: Client environment:user.name=danb
+INFO  [2012-09-18T02:21:41.256] [main:1] org.apache.zookeeper.ZooKeeper: Client environment:user.home=/Users/danb
+INFO  [2012-09-18T02:21:41.256] [main:1] org.apache.zookeeper.ZooKeeper: Client environment:user.dir=/Users/danb/src/bug-ordasity-zk-expire
+INFO  [2012-09-18T02:21:41.257] [main:1] org.apache.zookeeper.ZooKeeper: Initiating client connection, connectString=localhost:2190 sessionTimeout=3000 watcher=com.twitter.common.zookeeper.ZooKeeperClient$2@6602e323
+INFO  [2012-09-18T02:21:41.273] [main-SendThread():11] org.apache.zookeeper.ClientCnxn: Opening socket connection to server localhost/127.0.0.1:2190
+INFO  [2012-09-18T02:21:41.285] [main-SendThread(localhost:2190):11] org.apache.zookeeper.ClientCnxn: Socket connection established to localhost/127.0.0.1:2190, initiating session
+INFO  [2012-09-18T02:21:41.294] [main-SendThread(localhost:2190):11] org.apache.zookeeper.ClientCnxn: Session establishment complete on server localhost/127.0.0.1:2190, sessionid = 0x139c7800f8200fe, negotiated timeout = 4000
+INFO  [2012-09-18T02:21:41.296] [main-EventThread:12] com.boundary.ordasity.Cluster: ZooKeeper session established.
+INFO  [2012-09-18T02:21:41.296] [main-EventThread:12] com.boundary.ordasity.Cluster: Connected to Zookeeper (ID: node-0).
+INFO  [2012-09-18T02:21:41.514] [main-EventThread:12] bug.Bug: Joined cluster
+DEBUG [2012-09-18T02:21:41.788] [main-EventThread:12] com.boundary.ordasity.balancing.CountBalancingPolicy: bug Nodes: 0. Bug/work: 0.
+DEBUG [2012-09-18T02:21:41.788] [main-EventThread:12] com.boundary.ordasity.balancing.CountBalancingPolicy: Claiming bug/work pegged to me, and up to 0 more.
+DEBUG [2012-09-18T02:21:41.799] [main-EventThread:12] com.boundary.ordasity.balancing.CountBalancingPolicy: Handoff requests: , Handoff Results: , Unclaimed: 
+INFO  [2012-09-18T02:21:41.808] [main-EventThread:12] com.boundary.ordasity.listeners.ClusterNodesChangedListener: Nodes: node-0
+DEBUG [2012-09-18T02:21:41.808] [main-EventThread:12] com.boundary.ordasity.balancing.CountBalancingPolicy: bug Nodes: 1. Bug/work: 0.
+DEBUG [2012-09-18T02:21:41.808] [main-EventThread:12] com.boundary.ordasity.balancing.CountBalancingPolicy: Claiming bug/work pegged to me, and up to 0 more.
+DEBUG [2012-09-18T02:21:41.808] [main-EventThread:12] com.boundary.ordasity.balancing.CountBalancingPolicy: Handoff requests: , Handoff Results: , Unclaimed: 
+WARN  [2012-09-18T02:21:44.479] [main-SendThread(localhost:2190):11] org.apache.zookeeper.ClientCnxn: Session 0x139c7800f8200fe for server localhost/127.0.0.1:2190, unexpected error, closing socket connection and attempting reconnect
+java.io.IOException: Permission denied
+	at sun.nio.ch.FileDispatcher.write0(Native Method) ~[na:1.6.0_33]
+	at sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:29) ~[na:1.6.0_33]
+	at sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:69) ~[na:1.6.0_33]
+	at sun.nio.ch.IOUtil.write(IOUtil.java:40) ~[na:1.6.0_33]
+	at sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:336) ~[na:1.6.0_33]
+	at org.apache.zookeeper.ClientCnxn$SendThread.doIO(ClientCnxn.java:893) ~[bug-ordasity-zk-expire-0.0.0-SNAPSHOT-selfcontained.jar:na]
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1157) ~[bug-ordasity-zk-expire-0.0.0-SNAPSHOT-selfcontained.jar:na]
+INFO  [2012-09-18T02:21:44.581] [main-EventThread:12] com.boundary.ordasity.Cluster: ZooKeeper session disconnected. Awaiting reconnect...
+INFO  [2012-09-18T02:21:44.581] [main-EventThread:12] com.boundary.ordasity.Cluster: Awaiting reconnection to ZooKeeper...
+INFO  [2012-09-18T02:21:45.406] [main-SendThread(localhost:2190):11] org.apache.zookeeper.ClientCnxn: Opening socket connection to server localhost/fe80:0:0:0:0:0:0:1%1:2190
+WARN  [2012-09-18T02:21:45.408] [main-SendThread(localhost:2190):11] org.apache.zookeeper.ClientCnxn: Session 0x139c7800f8200fe for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method) ~[na:1.6.0_33]
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:599) ~[na:1.6.0_33]
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1146) ~[bug-ordasity-zk-expire-0.0.0-SNAPSHOT-selfcontained.jar:na]
+INFO  [2012-09-18T02:21:46.084] [main-SendThread(localhost:2190):11] org.apache.zookeeper.ClientCnxn: Opening socket connection to server localhost/0:0:0:0:0:0:0:1:2190
+WARN  [2012-09-18T02:21:46.085] [main-SendThread(localhost:2190):11] org.apache.zookeeper.ClientCnxn: Session 0x139c7800f8200fe for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method) ~[na:1.6.0_33]
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:599) ~[na:1.6.0_33]
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1146) ~[bug-ordasity-zk-expire-0.0.0-SNAPSHOT-selfcontained.jar:na]
+INFO  [2012-09-18T02:21:47.903] [main-SendThread(localhost:2190):11] org.apache.zookeeper.ClientCnxn: Opening socket connection to server localhost/127.0.0.1:2190
+ERROR [2012-09-18T02:21:47.904] [main-SendThread(localhost:2190):11] org.apache.zookeeper.ClientCnxn: Unable to open socket to localhost/127.0.0.1:2190
+WARN  [2012-09-18T02:21:47.904] [main-SendThread(localhost:2190):11] org.apache.zookeeper.ClientCnxn: Session 0x139c7800f8200fe for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.SocketException: Permission denied
+	at sun.nio.ch.Net.connect(Native Method) ~[na:1.6.0_33]
+	at sun.nio.ch.SocketChannelImpl.connect(SocketChannelImpl.java:532) ~[na:1.6.0_33]
+	at org.apache.zookeeper.ClientCnxn$SendThread.startConnect(ClientCnxn.java:1071) ~[bug-ordasity-zk-expire-0.0.0-SNAPSHOT-selfcontained.jar:na]
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1104) ~[bug-ordasity-zk-expire-0.0.0-SNAPSHOT-selfcontained.jar:na]
+INFO  [2012-09-18T02:21:48.527] [main-SendThread(localhost:2190):11] org.apache.zookeeper.ClientCnxn: Opening socket connection to server localhost/fe80:0:0:0:0:0:0:1%1:2190
+WARN  [2012-09-18T02:21:48.528] [main-SendThread(localhost:2190):11] org.apache.zookeeper.ClientCnxn: Session 0x139c7800f8200fe for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method) ~[na:1.6.0_33]
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:599) ~[na:1.6.0_33]
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1146) ~[bug-ordasity-zk-expire-0.0.0-SNAPSHOT-selfcontained.jar:na]
+INFO  [2012-09-18T02:21:49.607] [main-SendThread(localhost:2190):11] org.apache.zookeeper.ClientCnxn: Opening socket connection to server localhost/0:0:0:0:0:0:0:1:2190
+WARN  [2012-09-18T02:21:49.607] [main-SendThread(localhost:2190):11] org.apache.zookeeper.ClientCnxn: Session 0x139c7800f8200fe for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method) ~[na:1.6.0_33]
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:599) ~[na:1.6.0_33]
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1146) ~[bug-ordasity-zk-expire-0.0.0-SNAPSHOT-selfcontained.jar:na]
+INFO  [2012-09-18T02:21:51.261] [main-SendThread(localhost:2190):11] org.apache.zookeeper.ClientCnxn: Opening socket connection to server localhost/127.0.0.1:2190
+INFO  [2012-09-18T02:21:51.262] [main-SendThread(localhost:2190):11] org.apache.zookeeper.ClientCnxn: Socket connection established to localhost/127.0.0.1:2190, initiating session
+INFO  [2012-09-18T02:21:51.266] [main-SendThread(localhost:2190):11] org.apache.zookeeper.ClientCnxn: Unable to reconnect to ZooKeeper service, session 0x139c7800f8200fe has expired, closing socket connection
+INFO  [2012-09-18T02:21:51.267] [main-EventThread:12] com.twitter.common.zookeeper.ZooKeeperClient: Zookeeper session expired. Event: WatchedEvent state:Expired type:None path:null
+DEBUG [2012-09-18T02:21:51.267] [main-EventThread:12] org.apache.zookeeper.ZooKeeper: Close called on already closed client
+INFO  [2012-09-18T02:21:51.267] [main-EventThread:12] com.boundary.ordasity.Cluster: ZooKeeper session expired.
+WARN  [2012-09-18T02:21:51.267] [main-EventThread:12] com.boundary.ordasity.Cluster: Forcible shutdown initiated due to connection loss...
+INFO  [2012-09-18T02:21:51.268] [main-EventThread:12] bug.Bug: Left cluster
+INFO  [2012-09-18T02:21:51.268] [main-EventThread:12] com.boundary.ordasity.Cluster: Awaiting reconnection to ZooKeeper...
+INFO  [2012-09-18T02:21:51.268] [main-EventThread:12] org.apache.zookeeper.ZooKeeper: Initiating client connection, connectString=localhost:2190 sessionTimeout=3000 watcher=com.twitter.common.zookeeper.ZooKeeperClient$2@8135daf
+INFO  [2012-09-18T02:21:51.269] [main-SendThread():15] org.apache.zookeeper.ClientCnxn: Opening socket connection to server localhost/fe80:0:0:0:0:0:0:1%1:2190
+WARN  [2012-09-18T02:21:51.269] [main-SendThread(localhost:2190):15] org.apache.zookeeper.ClientCnxn: Session 0x0 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method) ~[na:1.6.0_33]
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:599) ~[na:1.6.0_33]
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1146) ~[bug-ordasity-zk-expire-0.0.0-SNAPSHOT-selfcontained.jar:na]
+WARN  [2012-09-18T02:21:52.270] [main-EventThread:12] com.boundary.ordasity.Cluster: Timed out reconnecting to ZooKeeper.
+INFO  [2012-09-18T02:21:52.270] [main-EventThread:12] com.boundary.ordasity.Cluster: Awaiting reconnection to ZooKeeper...
+INFO  [2012-09-18T02:21:52.317] [main-SendThread(localhost:2190):15] org.apache.zookeeper.ClientCnxn: Opening socket connection to server localhost/0:0:0:0:0:0:0:1:2190
+WARN  [2012-09-18T02:21:52.317] [main-SendThread(localhost:2190):15] org.apache.zookeeper.ClientCnxn: Session 0x0 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method) ~[na:1.6.0_33]
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:599) ~[na:1.6.0_33]
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1146) ~[bug-ordasity-zk-expire-0.0.0-SNAPSHOT-selfcontained.jar:na]
+DEBUG [2012-09-18T02:21:52.422] [main-EventThread:12] com.twitter.common.util.BackoffHelper: Operation failed, backing off for 1000ms
+INFO  [2012-09-18T02:21:52.851] [main-SendThread(localhost:2190):15] org.apache.zookeeper.ClientCnxn: Opening socket connection to server localhost/127.0.0.1:2190
+INFO  [2012-09-18T02:21:52.851] [main-SendThread(localhost:2190):15] org.apache.zookeeper.ClientCnxn: Socket connection established to localhost/127.0.0.1:2190, initiating session
+INFO  [2012-09-18T02:21:52.854] [main-SendThread(localhost:2190):15] org.apache.zookeeper.ClientCnxn: Session establishment complete on server localhost/127.0.0.1:2190, sessionid = 0x139c7800f8200ff, negotiated timeout = 4000
+INFO  [2012-09-18T02:21:52.855] [main-EventThread:16] com.boundary.ordasity.Cluster: ZooKeeper session established.
+WARN  [2012-09-18T02:21:52.856] [main-EventThread:16] com.boundary.ordasity.Cluster: Rejoined after session timeout. Forcing shutdown and clean startup.
+WARN  [2012-09-18T02:21:52.856] [main-EventThread:16] com.boundary.ordasity.Cluster: Forcible shutdown initiated due to connection loss...
+INFO  [2012-09-18T02:21:52.856] [main-EventThread:16] bug.Bug: Left cluster
+INFO  [2012-09-18T02:21:52.857] [main-EventThread:16] com.boundary.ordasity.Cluster: Connected to Zookeeper (ID: node-0).
+INFO  [2012-09-18T02:21:52.861] [main-EventThread:16] bug.Bug: Joined cluster
+DEBUG [2012-09-18T02:21:52.862] [main-EventThread:16] com.boundary.ordasity.balancing.CountBalancingPolicy: bug Nodes: 1. Bug/work: 0.
+DEBUG [2012-09-18T02:21:52.862] [main-EventThread:16] com.boundary.ordasity.balancing.CountBalancingPolicy: Claiming bug/work pegged to me, and up to 0 more.
+DEBUG [2012-09-18T02:21:52.862] [main-EventThread:16] com.boundary.ordasity.balancing.CountBalancingPolicy: Handoff requests: , Handoff Results: , Unclaimed: 
+INFO  [2012-09-18T02:21:53.424] [main-EventThread:12] com.boundary.ordasity.listeners.ClusterNodesChangedListener: Nodes: node-0
+DEBUG [2012-09-18T02:21:53.425] [main-EventThread:12] com.boundary.ordasity.balancing.CountBalancingPolicy: bug Nodes: 1. Bug/work: 0.
+DEBUG [2012-09-18T02:21:53.425] [main-EventThread:12] com.boundary.ordasity.balancing.CountBalancingPolicy: Claiming bug/work pegged to me, and up to 0 more.
+DEBUG [2012-09-18T02:21:53.425] [main-EventThread:12] com.boundary.ordasity.balancing.CountBalancingPolicy: Handoff requests: , Handoff Results: , Unclaimed: 
+INFO  [2012-09-18T02:21:53.429] [main-EventThread:12] org.apache.zookeeper.ClientCnxn: EventThread shut down
+WARN  [2012-09-18T02:21:57.430] [main-SendThread(localhost:2190):15] org.apache.zookeeper.ClientCnxn: Session 0x139c7800f8200ff for server localhost/127.0.0.1:2190, unexpected error, closing socket connection and attempting reconnect
+java.io.IOException: Permission denied
+	at sun.nio.ch.FileDispatcher.write0(Native Method) ~[na:1.6.0_33]
+	at sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:29) ~[na:1.6.0_33]
+	at sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:69) ~[na:1.6.0_33]
+	at sun.nio.ch.IOUtil.write(IOUtil.java:40) ~[na:1.6.0_33]
+	at sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:336) ~[na:1.6.0_33]
+	at org.apache.zookeeper.ClientCnxn$SendThread.doIO(ClientCnxn.java:893) ~[bug-ordasity-zk-expire-0.0.0-SNAPSHOT-selfcontained.jar:na]
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1157) ~[bug-ordasity-zk-expire-0.0.0-SNAPSHOT-selfcontained.jar:na]
+INFO  [2012-09-18T02:21:57.532] [main-EventThread:16] com.boundary.ordasity.Cluster: ZooKeeper session disconnected. Awaiting reconnect...
+INFO  [2012-09-18T02:21:57.532] [main-EventThread:16] com.boundary.ordasity.Cluster: Awaiting reconnection to ZooKeeper...
+INFO  [2012-09-18T02:21:58.009] [main-SendThread(localhost:2190):15] org.apache.zookeeper.ClientCnxn: Opening socket connection to server localhost/fe80:0:0:0:0:0:0:1%1:2190
+WARN  [2012-09-18T02:21:58.010] [main-SendThread(localhost:2190):15] org.apache.zookeeper.ClientCnxn: Session 0x139c7800f8200ff for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method) ~[na:1.6.0_33]
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:599) ~[na:1.6.0_33]
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1146) ~[bug-ordasity-zk-expire-0.0.0-SNAPSHOT-selfcontained.jar:na]
+INFO  [2012-09-18T02:21:58.372] [main-SendThread(localhost:2190):15] org.apache.zookeeper.ClientCnxn: Opening socket connection to server localhost/0:0:0:0:0:0:0:1:2190
+WARN  [2012-09-18T02:21:58.372] [main-SendThread(localhost:2190):15] org.apache.zookeeper.ClientCnxn: Session 0x139c7800f8200ff for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method) ~[na:1.6.0_33]
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:599) ~[na:1.6.0_33]
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1146) ~[bug-ordasity-zk-expire-0.0.0-SNAPSHOT-selfcontained.jar:na]
+INFO  [2012-09-18T02:22:00.330] [main-SendThread(localhost:2190):15] org.apache.zookeeper.ClientCnxn: Opening socket connection to server localhost/127.0.0.1:2190
+ERROR [2012-09-18T02:22:00.330] [main-SendThread(localhost:2190):15] org.apache.zookeeper.ClientCnxn: Unable to open socket to localhost/127.0.0.1:2190
+WARN  [2012-09-18T02:22:00.330] [main-SendThread(localhost:2190):15] org.apache.zookeeper.ClientCnxn: Session 0x139c7800f8200ff for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.SocketException: Permission denied
+	at sun.nio.ch.Net.connect(Native Method) ~[na:1.6.0_33]
+	at sun.nio.ch.SocketChannelImpl.connect(SocketChannelImpl.java:532) ~[na:1.6.0_33]
+	at org.apache.zookeeper.ClientCnxn$SendThread.startConnect(ClientCnxn.java:1071) ~[bug-ordasity-zk-expire-0.0.0-SNAPSHOT-selfcontained.jar:na]
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1104) ~[bug-ordasity-zk-expire-0.0.0-SNAPSHOT-selfcontained.jar:na]
+INFO  [2012-09-18T02:22:00.471] [main-SendThread(localhost:2190):15] org.apache.zookeeper.ClientCnxn: Opening socket connection to server localhost/fe80:0:0:0:0:0:0:1%1:2190
+WARN  [2012-09-18T02:22:00.472] [main-SendThread(localhost:2190):15] org.apache.zookeeper.ClientCnxn: Session 0x139c7800f8200ff for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method) ~[na:1.6.0_33]
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:599) ~[na:1.6.0_33]
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1146) ~[bug-ordasity-zk-expire-0.0.0-SNAPSHOT-selfcontained.jar:na]
+INFO  [2012-09-18T02:22:00.701] [main-SendThread(localhost:2190):15] org.apache.zookeeper.ClientCnxn: Opening socket connection to server localhost/0:0:0:0:0:0:0:1:2190
+WARN  [2012-09-18T02:22:00.701] [main-SendThread(localhost:2190):15] org.apache.zookeeper.ClientCnxn: Session 0x139c7800f8200ff for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method) ~[na:1.6.0_33]
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:599) ~[na:1.6.0_33]
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1146) ~[bug-ordasity-zk-expire-0.0.0-SNAPSHOT-selfcontained.jar:na]
+INFO  [2012-09-18T02:22:02.573] [main-SendThread(localhost:2190):15] org.apache.zookeeper.ClientCnxn: Opening socket connection to server localhost/127.0.0.1:2190
+INFO  [2012-09-18T02:22:02.574] [main-SendThread(localhost:2190):15] org.apache.zookeeper.ClientCnxn: Socket connection established to localhost/127.0.0.1:2190, initiating session
+INFO  [2012-09-18T02:22:02.575] [main-SendThread(localhost:2190):15] org.apache.zookeeper.ClientCnxn: Unable to reconnect to ZooKeeper service, session 0x139c7800f8200ff has expired, closing socket connection
+INFO  [2012-09-18T02:22:02.575] [main-EventThread:16] com.twitter.common.zookeeper.ZooKeeperClient: Zookeeper session expired. Event: WatchedEvent state:Expired type:None path:null
+INFO  [2012-09-18T02:22:02.575] [main-EventThread:16] com.boundary.ordasity.Cluster: ZooKeeper session expired.
+WARN  [2012-09-18T02:22:02.575] [main-EventThread:16] com.boundary.ordasity.Cluster: Forcible shutdown initiated due to connection loss...
+INFO  [2012-09-18T02:22:02.575] [main-EventThread:16] bug.Bug: Left cluster
+INFO  [2012-09-18T02:22:02.575] [main-EventThread:16] com.boundary.ordasity.Cluster: Awaiting reconnection to ZooKeeper...
+DEBUG [2012-09-18T02:22:02.576] [main-EventThread:16] com.twitter.common.util.BackoffHelper: Operation failed, backing off for 1000ms
+DEBUG [2012-09-18T02:22:03.576] [main-EventThread:16] com.twitter.common.util.BackoffHelper: Operation failed, backing off for 2000ms
+DEBUG [2012-09-18T02:22:05.577] [main-EventThread:16] com.twitter.common.util.BackoffHelper: Operation failed, backing off for 4000ms
+DEBUG [2012-09-18T02:22:09.577] [main-EventThread:16] com.twitter.common.util.BackoffHelper: Operation failed, backing off for 8000ms
+DEBUG [2012-09-18T02:22:17.579] [main-EventThread:16] com.twitter.common.util.BackoffHelper: Operation failed, backing off for 16000ms
+DEBUG [2012-09-18T02:22:33.580] [main-EventThread:16] com.twitter.common.util.BackoffHelper: Operation failed, backing off for 32000ms
+DEBUG [2012-09-18T02:23:05.581] [main-EventThread:16] com.twitter.common.util.BackoffHelper: Operation failed, backing off for 60000ms
+DEBUG [2012-09-18T02:24:05.581] [main-EventThread:16] com.twitter.common.util.BackoffHelper: Operation failed, backing off for 60000ms
+DEBUG [2012-09-18T02:25:05.581] [main-EventThread:16] com.twitter.common.util.BackoffHelper: Operation failed, backing off for 60000ms
+DEBUG [2012-09-18T02:26:05.582] [main-EventThread:16] com.twitter.common.util.BackoffHelper: Operation failed, backing off for 60000ms

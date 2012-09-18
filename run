@@ -1,0 +1,12 @@
+#!/bin/bash -eu
+
+dir="`dirname "$0"`"
+config="$dir/config"
+classes="$dir/target/classes"
+
+jar="`/bin/ls "$dir"/target/*-selfcontained.jar | tail -1`"
+
+exec java \
+  -cp "$config:$classes:$jar" \
+  `cat "$config"/jvm.config` \
+  bug.Bug
